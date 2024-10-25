@@ -1,11 +1,11 @@
 import {getServerSession} from 'next-auth'
-import {authOptions} from '@/app/api/auth/[...nextauth]/route'
+// import {authOptions} from '@/app/api/auth/[...nextauth]/route'
 import SignOutButton from '@/components/SignOutButton'
 import GetSessionButton from '@/components/GetSessionButton'
 import Link from 'next/link'
 
 const AdminPage = async () => {
-    const session = await getServerSession(authOptions)
+    const session = await getServerSession()
 
     console.log('Session: ', session)
 

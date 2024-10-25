@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import {getServerSession} from 'next-auth'
-import {authOptions} from '@/app/api/auth/[...nextauth]/route'
+// import {authOptions} from '@/app/api/auth/[...nextauth]/route'
 import SignInButton from '@/components/SignInButton'
 import SignOutButton from '@/components/SignOutButton'
 import Link from 'next/link'
 
 export default async function Home() {
-  const session = await getServerSession(authOptions)
+  const session = await getServerSession()
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-between p-24">
